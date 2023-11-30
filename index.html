@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heladeria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> FRESH CREAM</h1>
+    <h2> HAZ TU PEDIDO AQUÍ </h2>
+    <br>
+    <form action="" id="form">
+        <h3>¿Qué desea pedir? (Elija 1 opción)</h3>
+        <label for="1bocha">1 Bocha: </label>
+        <input type="checkbox" name="" id="1bocha">
+        <label for="2bochas">2 Bochas: </label>
+        <input type="checkbox" name="" id="2bochas">
+        <label for="cuarto">1/4kg: </label>
+        <input type="checkbox" name="" id="cuarto">
+        <label for="medio">1/2kg: </label>
+        <input type="checkbox" name="" id="medio">
+        <label for="kilo">1kg: </label>
+        <input type="checkbox" name="" id="kilo">
+        <h3> Elija su gusto </h3>
+        <input type="text" name="" id="gustos" required>
+        <input type="button" value="enviar" onclick="pedidoHelado()">
+    </form>
+
+    <img src="sabores2.png" alt="">
+    <h3> datos ingresados</h3>
+    <a>Gustos elegidos: </a>
+    <textarea name="" id="gustosElegidos" cols="30" rows="3" readonly></textarea>
+    
+    <script>
+        function pedidoHelado(){
+            var cantidad = 0;
+            var gusto = document.getElementById("gustos").value;
+
+            if(document.getElementById("1bocha").checked==true){
+                cantidad="1 Bocha de";
+            }else if(document.getElementById("2bochas").checked==true){
+                cantidad="2 Bochas de";
+            }else if(document.getElementById("cuarto").checked==true){
+                cantidad="1/4kg de ";
+            }else if(document.getElementById("medio").checked==true){
+                cantidad="1/2kg de ";
+            }else if(document.getElementById("kilo").checked==true){
+                cantidad="1kg de ";
+            };
+
+        
+            var helado = cantidad + ' ' +  gusto
+
+            document.getElementById('gustosElegidos').innerHTML = helado;
+        };
+    </script>
+    
+
+</body>
+</html>

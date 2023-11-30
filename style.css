@@ -1,0 +1,18 @@
+body {
+    background-color: thistle;
+}
+
+h1 {
+    text-align: center;
+    font-family: Cooper;
+    background-color: blueviolet;
+    
+}
+h3{
+    background-color: blueviolet;
+}
+img{
+    float: center;
+    width: 450px;
+    height: 500px;
+}
